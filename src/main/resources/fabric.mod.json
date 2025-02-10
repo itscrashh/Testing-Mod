@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "testingmod",
+	"version": "${version}",
+	"name": "Testing Mod",
+	"description": "Testing",
+	"authors": [
+		"ilyas!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/itscrashh/Testing-Mod.git"
+	},
+	"license": "MIT",
+	"icon": "assets/testingmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ilyas.testingmod.TestingMod"
+		],
+		"fabric-datagen": [
+			"net.ilyas.testingmod.TestingModDataGenerator"
+		],
+		"client":	[
+			"net.ilyas.testingmod.TestingModClient"
+		]
+	},
+	"mixins": [
+		"testingmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
