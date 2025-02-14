@@ -2,6 +2,7 @@ package net.ilyas.testingmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ilyas.testingmod.TestingMod;
+import net.ilyas.testingmod.item.custom.MossifierItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -14,6 +15,8 @@ public class ModItems {
 
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID,"pink_garnet")))));
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID,"raw_pink_garnet")))));
+
+    public static final Item MOSSIFIER = registerItem("mossifier", new MossifierItem(new Item.Settings().maxDamage(100).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "mossifier")))));
 
 
     private static Item registerItem(String name, Item item) {

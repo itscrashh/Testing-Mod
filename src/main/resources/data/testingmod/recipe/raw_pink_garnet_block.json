@@ -2,8 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "testingmod:pink_garnet"
+    "#": "testingmod:raw_pink_garnet"
     },
+
 
   "pattern": [
     "###",
@@ -11,11 +12,10 @@
     "###"
   ],
 
+
   "result": {
     "count": 1,
-    "id": "testingmod:pink_garnet_block"
+    "id": "testingmod:raw_pink_garnet_block"
   }
-
-
 
 }
