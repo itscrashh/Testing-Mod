@@ -41,6 +41,13 @@ public class ModBlocks {
                             .strength(3f)
                             .requiresTool()));
 
+    public static final Block RUNE_BLOCK = registerBlock("rune_block",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "rune_block")))
+                            .strength(3f)
+                            .requiresTool()));
+
+
     public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_deepslate_ore")))

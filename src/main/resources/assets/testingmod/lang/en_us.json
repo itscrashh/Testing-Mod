@@ -3,11 +3,16 @@
   "item.testingmod.raw_pink_garnet": "Raw Pink Garnet",
   "item.testingmod.mossifier": "Mossifier",
 
+  "item.testingmod.fire_rune": "Fire Rune",
+  "item.testingmod.rune_essence": "Rune Essence",
+
 
   "block.testingmod.pink_garnet_block": "Block of Pink Garnet",
   "block.testingmod.raw_pink_garnet_block": "Raw Pink Garnet Block",
   "block.testingmod.pink_garnet_ore": "Pink Garnet Ore",
   "block.testingmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+
+  "block.testingmod.rune_block": "Rune Block",
   "block.testingmod.magic_block": "Magic Block",
 
   "block.testingmod.pink_garnet_wall": "Pink Garnet Wall",
@@ -24,6 +29,7 @@
 
 
   "itemgroup.testingmod.pink_garnet_items": "Pink Garnet Items",
-  "itemgroup.testingmod.pink_garnet_blocks": "Pink Garnet Blocks"
+  "itemgroup.testingmod.pink_garnet_blocks": "Pink Garnet Blocks",
+  "itemgroup.testingmod.rune_item_group": "Rune Items"
 
 }

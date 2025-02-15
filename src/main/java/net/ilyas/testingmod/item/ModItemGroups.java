@@ -49,6 +49,16 @@ public class ModItemGroups {
 
                     }).build());
 
+    public static final ItemGroup RUNE_ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TestingMod.MOD_ID, "rune_item_group"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.RUNE_ESSENCE))
+                    .displayName(Text.translatable("itemgroup.testingmod.rune_item_group"))
+                    .entries((displayContext, entries) ->  {
+                        entries.add(ModItems.RUNE_ESSENCE);
+                        entries.add(ModItems.FIRE_RUNE);
+                        entries.add(ModBlocks.RUNE_BLOCK);
+                    }).build());
+
 
 
     public static void registerItemGroups() {
