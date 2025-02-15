@@ -8,7 +8,22 @@
   "block.testingmod.raw_pink_garnet_block": "Raw Pink Garnet Block",
   "block.testingmod.pink_garnet_ore": "Pink Garnet Ore",
   "block.testingmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
+  "block.testingmod.magic_block": "Magic Block",
+
+  "block.testingmod.pink_garnet_wall": "Pink Garnet Wall",
+  "block.testingmod.pink_garnet_door": "Pink Garnet Door",
+  "block.testingmod.pink_garnet_trapdoor": "Pink Garnet Trapdoor",
+  "block.testingmod.pink_garnet_fence": "Pink Garnet Fence",
+  "block.testingmod.pink_garnet_fence_gate": "Pink Garnet Fence Gate",
+  "block.testingmod.pink_garnet_button": "Pink Garnet Button",
+  "block.testingmod.pink_garnet_stairs": "Pink Garnet Stairs",
+  "block.testingmod.pink_garnet_slab": "Pink Garnet Slab",
+  "block.testingmod.pink_garnet_pressure_plate": "Pink Garnet Pressure Plate",
+
+
+
 
   "itemgroup.testingmod.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.testingmod.pink_garnet_blocks": "Pink Garnet Blocks"
+
 }

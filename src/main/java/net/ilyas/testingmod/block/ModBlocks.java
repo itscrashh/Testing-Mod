@@ -2,6 +2,7 @@ package net.ilyas.testingmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ilyas.testingmod.TestingMod;
+import net.ilyas.testingmod.block.custom.MagicBlock;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
@@ -12,6 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.structure.StrongholdGenerator;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 
@@ -43,8 +45,67 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
                     AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_deepslate_ore")))
                             .strength(4f)
-                            .requiresTool()
+                    .requiresTool()
                             .sounds(BlockSoundGroup.DEEPSLATE)));
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+        new MagicBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "magic_block")))
+                .strength(3f)
+                .requiresTool()
+                .sounds(BlockSoundGroup.NETHERITE)));
+
+    public static final Block PINK_GARNET_STAIRS = registerBlock("pink_garnet_stairs",
+        new StairsBlock(ModBlocks.PINK_GARNET_BLOCK.getDefaultState(),
+                AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_stairs")))
+                        .strength(2f)
+                        .requiresTool()));
+
+    public static final Block PINK_GARNET_SLAB = registerBlock("pink_garnet_slab",
+            new SlabBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_slab")))
+                            .strength(2f)
+                            .requiresTool()));
+
+    public static final Block PINK_GARNET_BUTTON = registerBlock("pink_garnet_button",
+            new ButtonBlock(BlockSetType.IRON, 2,
+                    AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_button")))
+                            .strength(2f)
+                            .noCollision()
+                            .requiresTool()));
+
+    public static final Block PINK_GARNET_PRESSURE_PLATE = registerBlock("pink_garnet_pressure_plate",
+            new PressurePlateBlock(BlockSetType.IRON,
+                    AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_pressure_plate")))
+                            .strength(2f)
+                            .requiresTool()));
+
+    public static final Block PINK_GARNET_FENCE = registerBlock("pink_garnet_fence",
+            new FenceBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_fence")))
+                            .strength(2f)
+                            .requiresTool()));
+
+    public static final Block PINK_GARNET_FENCE_GATE = registerBlock("pink_garnet_fence_gate",
+            new FenceGateBlock(WoodType.ACACIA,
+                    AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_fence_gate")))
+                            .strength(2f)
+                            .requiresTool()));
+
+    public static final Block PINK_GARNET_WALL = registerBlock("pink_garnet_wall",
+            new WallBlock(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_wall")))
+                            .strength(2f)
+                            .requiresTool()));
+
+    public static final Block PINK_GARNET_DOOR = registerBlock("pink_garnet_door",
+            new DoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_door")))
+                            .strength(2f)
+                            .nonOpaque()
+                            .requiresTool()));
+
+    public static final Block PINK_GARNET_TRAPDOOR = registerBlock("pink_garnet_trapdoor",
+            new TrapdoorBlock(BlockSetType.IRON, AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, "pink_garnet_trapdoor")))
+                            .strength(2f)
+                            .nonOpaque()
+                            .requiresTool()));
+
 
 
 
