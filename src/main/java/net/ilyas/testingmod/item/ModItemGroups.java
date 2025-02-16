@@ -21,6 +21,14 @@ public class ModItemGroups {
         entries.add(ModItems.PINK_GARNET);
         entries.add(ModItems.RAW_PINK_GARNET);
         entries.add(ModItems.MOSSIFIER);
+
+        entries.add(ModItems.PINK_GARNET_SWORD);
+        entries.add(ModItems.PINK_GARNET_AXE);
+        entries.add(ModItems.PINK_GARNET_PICKAXE);
+        entries.add(ModItems.PINK_GARNET_SHOVEL);
+        entries.add(ModItems.PINK_GARNET_HOE);
+        entries.add(ModItems.PINK_GARNET_HAMMER);
+
     }).build());
 
     public static final ItemGroup PINK_GARNET_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -46,6 +54,8 @@ public class ModItemGroups {
 
                         entries.add(ModBlocks.MAGIC_BLOCK);
 
+                        entries.add(ModBlocks.PINK_GARNET_LAMP);
+
 
                     }).build());
 
@@ -56,7 +66,12 @@ public class ModItemGroups {
                     .entries((displayContext, entries) ->  {
                         entries.add(ModItems.RUNE_ESSENCE);
                         entries.add(ModItems.FIRE_RUNE);
+                        entries.add(ModItems.AIR_RUNE);
+                        entries.add(ModItems.FIRE_TALISMAN);
+                        entries.add(ModItems.AIR_TALISMAN);
                         entries.add(ModBlocks.RUNE_BLOCK);
+                        entries.add(ModBlocks.ALTAR_BLOCK);
+
                     }).build());
 
 

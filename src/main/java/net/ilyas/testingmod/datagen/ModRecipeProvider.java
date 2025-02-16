@@ -13,6 +13,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -35,12 +36,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
                 offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GARNET_BLOCK);
 
+                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.RUNE_ESSENCE, RecipeCategory.MISC, ModBlocks.RUNE_BLOCK);
+
                 createShaped(RecipeCategory.MISC, ModBlocks.RAW_PINK_GARNET_BLOCK)
                         .pattern("RRR")
                         .pattern("RRR")
                         .pattern("RRR")
                         .input('R', ModItems.RAW_PINK_GARNET)
                         .criterion(hasItem(ModItems.RAW_PINK_GARNET), conditionsFromItem(ModItems.RAW_PINK_GARNET))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.ALTAR_BLOCK)
+                        .pattern("WWW")
+                        .pattern("RSR")
+                        .pattern("RRR")
+                        .input('R', ModBlocks.RUNE_BLOCK)
+                        .input('W', ItemTags.PLANKS)
+                        .input('S', ItemTags.WOODEN_SLABS)
+                        .criterion(hasItem(ModItems.RUNE_ESSENCE), conditionsFromItem(ModItems.RUNE_ESSENCE))
                         .offerTo(exporter);
 
                 createShapeless(RecipeCategory.MISC, ModItems.RAW_PINK_GARNET, 9)
@@ -86,6 +99,47 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
                         .offerTo(exporter);
 
+
+                createShaped(RecipeCategory.TOOLS, ModItems.PINK_GARNET_PICKAXE)
+                        .pattern("RRR")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.TOOLS, ModItems.PINK_GARNET_SWORD)
+                        .pattern(" R ")
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .input('R', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.TOOLS, ModItems.PINK_GARNET_AXE)
+                        .pattern("RR ")
+                        .pattern("RS ")
+                        .pattern(" S ")
+                        .input('R', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.TOOLS, ModItems.PINK_GARNET_SHOVEL)
+                        .pattern(" R ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.TOOLS, ModItems.PINK_GARNET_HOE)
+                        .pattern("RR ")
+                        .pattern(" S ")
+                        .pattern(" S ")
+                        .input('R', ModItems.PINK_GARNET)
+                        .input('S', Items.STICK)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
 
 
             }

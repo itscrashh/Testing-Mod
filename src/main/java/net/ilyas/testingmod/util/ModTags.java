@@ -10,6 +10,9 @@ import net.minecraft.util.Identifier;
 public class ModTags {
     public static class Blocks {
 
+        public static final TagKey<Block> NEEDS_PINK_GARNET_TOOL = createTag("needs_pink_garnet_tool");
+        public static final TagKey<Block> INCORRECT_FOR_PINK_GARNET_TOOL = createTag("incorrect_for_pink_garnet_tool");
+        public static final TagKey<Block> NEEDS_NETHERITE_TOOL = createTag("needs_netherite_tool");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(TestingMod.MOD_ID, name));
@@ -18,6 +21,9 @@ public class ModTags {
         public static class Items {
 
             public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
+            public static final TagKey<Item> PINK_GARNET_REPAIR = createTag ("pink_garnet_repair");
+
+            public static final TagKey<Item> FIRE_RUNE_TAG = createTag("fire_rune_tag");
 
             private static TagKey<Item> createTag(String name) {
                 return TagKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, name));

@@ -3,8 +3,18 @@
   "item.testingmod.raw_pink_garnet": "Raw Pink Garnet",
   "item.testingmod.mossifier": "Mossifier",
 
+  "item.testingmod.pink_garnet_sword": "Pink Garnet Sword",
+  "item.testingmod.pink_garnet_pickaxe": "Pink Garnet Pickaxe",
+  "item.testingmod.pink_garnet_shovel": "Pink Garnet Shovel",
+  "item.testingmod.pink_garnet_axe": "Pink Garnet Axe",
+  "item.testingmod.pink_garnet_hoe": "Pink Garnet Hoe",
+  "item.testingmod.pink_garnet_hammer": "Pink Garnet Hammer",
+
   "item.testingmod.fire_rune": "Fire Rune",
   "item.testingmod.rune_essence": "Rune Essence",
+  "item.testingmod.air_rune": "Air Rune",
+  "item.testingmod.fire_talisman": "Fire Talisman",
+  "item.testingmod.air_talisman":"Air Talisman",
 
 
   "block.testingmod.pink_garnet_block": "Block of Pink Garnet",
@@ -13,6 +23,7 @@
   "block.testingmod.pink_garnet_deepslate_ore": "Pink Garnet Deepslate Ore",
 
   "block.testingmod.rune_block": "Rune Block",
+  "block.testingmod.altar_block": "Altar Block",
   "block.testingmod.magic_block": "Magic Block",
 
   "block.testingmod.pink_garnet_wall": "Pink Garnet Wall",
@@ -25,11 +36,22 @@
   "block.testingmod.pink_garnet_slab": "Pink Garnet Slab",
   "block.testingmod.pink_garnet_pressure_plate": "Pink Garnet Pressure Plate",
 
+  "block.testingmod.pink_garnet_lamp_block": "Pink Garnet Lamp",
+
 
 
 
   "itemgroup.testingmod.pink_garnet_items": "Pink Garnet Items",
   "itemgroup.testingmod.pink_garnet_blocks": "Pink Garnet Blocks",
-  "itemgroup.testingmod.rune_item_group": "Rune Items"
+  "itemgroup.testingmod.rune_item_group": "Rune Items",
+
+  "tooltip.testingmod.mossifier_item.tooltip": "Hold §eShift§r for more information!",
+  "tooltip.testingmod.mossifier_item.shift_down": "Mossify your blocks!",
+
+  "tooltip.testingmod.fire_talisman.shift_down": "Use on an Altar to turn it into a Fire Altar!",
+  "tooltip.testingmod.fire_talisman.tooltip": "Hold §eShift§r for more information!",
+
+  "tooltip.testingmod.air_talisman.tooltip": "Hold §eShift§r for more information!",
+  "tooltip.testingmod.air_talisman.shift_down": "Use on an Altar to turn it into an Air Altar!"
 
 }
