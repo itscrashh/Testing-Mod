@@ -37,5 +37,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider{
         getOrCreateTagBuilder(ModTags.Items.FIRE_RUNE_TAG)
                 .add(ModItems.FIRE_RUNE);
 
+        getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.PINK_GARNET_HELMET)
+                .add(ModItems.PINK_GARNET_CHESTPLATE)
+                .add(ModItems.PINK_GARNET_LEGGINGS)
+                .add(ModItems.PINK_GARNET_BOOTS);
+
     }
 }

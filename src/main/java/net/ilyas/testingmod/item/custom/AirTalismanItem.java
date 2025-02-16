@@ -1,9 +1,13 @@
 package net.ilyas.testingmod.item.custom;
 
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import net.ilyas.testingmod.block.ModBlocks;
 import net.ilyas.testingmod.component.ModDataComponentTypes;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.entity.EntityType;
+import net.minecraft.entity.LightningEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
@@ -12,10 +16,13 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 public class AirTalismanItem extends Item {
 
@@ -33,6 +40,9 @@ public class AirTalismanItem extends Item {
     public ActionResult useOnBlock(ItemUsageContext context) {
         World world = context.getWorld();
         Block clickedBlock = world.getBlockState(context.getBlockPos()).getBlock();
+        int x = context.getBlockPos().getX();
+        int y = context.getBlockPos().getY();
+        int z = context.getBlockPos().getZ();
 
         if(AIR_TALISMAN_MAP.containsKey(clickedBlock)) {
             if(!world.isClient()) {
@@ -40,11 +50,16 @@ public class AirTalismanItem extends Item {
 
                 world.playSound(null, context.getBlockPos(), SoundEvents.ENTITY_LIGHTNING_BOLT_IMPACT, SoundCategory.BLOCKS);
 
+                LightningEntity lightningEntity = new LightningEntity(EntityType.LIGHTNING_BOLT, world);
+                lightningEntity.setPos(x, y, z);
+                lightningEntity.setCosmetic(true);
+                world.spawnEntity(lightningEntity);
 
+                return ActionResult.SUCCESS;
             }
         }
 
-        return ActionResult.SUCCESS;
+        return ActionResult.FAIL;
     }
 
     @Override
@@ -57,3 +72,4 @@ public class AirTalismanItem extends Item {
         super.appendTooltip(stack, context, tooltip, type);
     }
 }
+

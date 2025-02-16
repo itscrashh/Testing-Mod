@@ -26,5 +26,6 @@ public class TestingMod implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 
 		PlayerBlockBreakEvents.BEFORE.register(new HammerUsageEvent());
+
 	}
 }

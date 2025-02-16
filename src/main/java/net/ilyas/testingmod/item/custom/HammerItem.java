@@ -1,14 +1,18 @@
 package net.ilyas.testingmod.item.custom;
 
+import net.ilyas.testingmod.component.ModDataComponentTypes;
 import net.ilyas.testingmod.item.ModItems;
 import net.ilyas.testingmod.util.ModTags;
 import net.minecraft.block.Block;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
@@ -67,5 +71,17 @@ public class HammerItem extends MiningToolItem {
         }
 
         return positions;
+    }
+
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        if(Screen.hasShiftDown()) {
+            tooltip.add(Text.translatable("tooltip.testingmod.hammer_item.shift_down"));
+        } else {
+            tooltip.add(Text.translatable("tooltip.testingmod.hammer_item.tooltip"));
+        }
+
+        super.appendTooltip(stack, context, tooltip, type);
     }
 }

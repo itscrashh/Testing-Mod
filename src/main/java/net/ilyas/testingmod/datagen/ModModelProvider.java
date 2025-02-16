@@ -2,10 +2,16 @@ package net.ilyas.testingmod.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.ilyas.testingmod.TestingMod;
 import net.ilyas.testingmod.block.ModBlocks;
 import net.ilyas.testingmod.block.custom.PinkGarnetLampBlock;
+import net.ilyas.testingmod.item.ModArmorMaterials;
 import net.ilyas.testingmod.item.ModItems;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.entity.equipment.EquipmentModel;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.equipment.EquipmentAssetKeys;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -66,5 +72,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PINK_GARNET_AXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PINK_GARNET_HAMMER, Models.HANDHELD);
 
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_HELMET, ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL_KEY,
+                "helmet", false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_CHESTPLATE, ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL_KEY,
+                "chestplate", false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_LEGGINGS, ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL_KEY,
+                "leggings", false);
+        itemModelGenerator.registerArmor(ModItems.PINK_GARNET_BOOTS, ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL_KEY,
+                "boots", false);
     }
 }

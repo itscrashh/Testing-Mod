@@ -2,11 +2,9 @@ package net.ilyas.testingmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.ilyas.testingmod.TestingMod;
-import net.ilyas.testingmod.item.custom.AirTalismanItem;
-import net.ilyas.testingmod.item.custom.FireTalismanItem;
-import net.ilyas.testingmod.item.custom.HammerItem;
-import net.ilyas.testingmod.item.custom.MossifierItem;
+import net.ilyas.testingmod.item.custom.*;
 import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -45,6 +43,20 @@ public class ModItems {
     public static final Item PINK_GARNET_HAMMER = registerItem("pink_garnet_hammer",
             new HammerItem(ModToolsMaterials.PINK_GARNET, 7, -3.8f, new Item.Settings()
                     .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "pink_garnet_hammer"))))));
+
+    public static final Item PINK_GARNET_HELMET = registerItem("pink_garnet_helmet",
+            new ModArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.HELMET, new Item.Settings()
+                    .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "pink_garnet_helmet"))))));
+    public static final Item PINK_GARNET_CHESTPLATE = registerItem("pink_garnet_chestplate",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.CHESTPLATE, new Item.Settings()
+                    .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "pink_garnet_chestplate"))))));
+    public static final Item PINK_GARNET_LEGGINGS = registerItem("pink_garnet_leggings",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.LEGGINGS, new Item.Settings()
+                    .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "pink_garnet_leggings"))))));
+    public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
+            new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.BOOTS, new Item.Settings()
+                    .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "pink_garnet_boots"))))));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TestingMod.MOD_ID, name), item);
