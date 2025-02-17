@@ -11,6 +11,14 @@ import net.ilyas.testingmod.util.HammerUsageEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/** TO DO LIST
+ * ADD MORE ORES - RUBY, ETC
+ * TURN "PINK_GARNET_HAMMER" INTO A STAFF THAT USES EARTH RUNES
+ * ADD MORE RUNES
+ *
+ */
+
+
 public class TestingMod implements ModInitializer {
 	public static final String MOD_ID = "testingmod";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);

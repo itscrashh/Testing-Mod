@@ -10,10 +10,14 @@
   "item.testingmod.pink_garnet_hoe": "Pink Garnet Hoe",
   "item.testingmod.pink_garnet_hammer": "Pink Garnet Hammer",
 
+  "item.testingmod.ilyas_smithing_template": "Ilyas Smithing Template",
+
   "item.testingmod.pink_garnet_helmet": "Pink Garnet Helmet",
   "item.testingmod.pink_garnet_chestplate": "Pink Garnet Chestplate",
   "item.testingmod.pink_garnet_leggings": "Pink Garnet Leggings",
   "item.testingmod.pink_garnet_boots": "Pink Garnet Boots",
+
+  "item.testingmod.pink_garnet_horse_armor": "Pink Garnet Horse Armor",
 
   "item.testingmod.fire_rune": "Fire Rune",
   "item.testingmod.rune_essence": "Rune Essence",
@@ -60,5 +64,8 @@
   "tooltip.testingmod.air_talisman.shift_down": "Use on an Altar to turn it into an Air Altar!",
 
   "tooltip.testingmod.hammer_item.shift_down": "Breaks blocks in a 3x3 area when you have Fire Runes!",
-  "tooltip.testingmod.hammer_item.tooltip": "Hold §eShift§r for more information!"
+  "tooltip.testingmod.hammer_item.tooltip": "Hold §eShift§r for more information!",
+
+  "trim_material.testingmod.pink_garnet": "Pink Garnet Material",
+  "trim_pattern.testingmod.ilyas": "Ilyas Armor Pattern"
 }

@@ -55,11 +55,12 @@ public class AirTalismanItem extends Item {
                 lightningEntity.setCosmetic(true);
                 world.spawnEntity(lightningEntity);
 
-                return ActionResult.SUCCESS;
+
+
             }
         }
 
-        return ActionResult.FAIL;
+        return ActionResult.SUCCESS;
     }
 
     @Override

@@ -9,6 +9,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
@@ -56,6 +57,14 @@ public class ModItems {
     public static final Item PINK_GARNET_BOOTS = registerItem("pink_garnet_boots",
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.BOOTS, new Item.Settings()
                     .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "pink_garnet_boots"))))));
+
+    public static final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor",
+            new AnimalArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, new Item.Settings()
+                    .maxCount(1)
+                    .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "pink_garnet_horse_armor"))))));
+
+    public static final Item ILYAS_SMITHING_TEMPLATE = registerItem("ilyas_smithing_template",
+    SmithingTemplateItem.of(new Item.Settings().registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "ilyas_smithing_template"))))));
 
 
     private static Item registerItem(String name, Item item) {

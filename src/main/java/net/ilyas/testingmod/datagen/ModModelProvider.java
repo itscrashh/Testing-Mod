@@ -9,6 +9,7 @@ import net.ilyas.testingmod.item.ModArmorMaterials;
 import net.ilyas.testingmod.item.ModItems;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.entity.equipment.EquipmentModel;
+import net.minecraft.client.render.item.model.ItemModel;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.equipment.EquipmentAssetKeys;
 import net.minecraft.registry.RegistryKey;
@@ -80,5 +81,9 @@ public class ModModelProvider extends FabricModelProvider {
                 "leggings", false);
         itemModelGenerator.registerArmor(ModItems.PINK_GARNET_BOOTS, ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL_KEY,
                 "boots", false);
+
+        itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ILYAS_SMITHING_TEMPLATE, Models.GENERATED);
+
     }
 }

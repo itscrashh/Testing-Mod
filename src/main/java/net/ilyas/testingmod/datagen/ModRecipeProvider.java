@@ -2,6 +2,7 @@ package net.ilyas.testingmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.ilyas.testingmod.TestingMod;
 import net.ilyas.testingmod.block.ModBlocks;
 import net.ilyas.testingmod.item.ModItems;
 import net.minecraft.data.recipe.RecipeExporter;
@@ -12,8 +13,11 @@ import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.util.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -34,7 +38,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 offerSmelting(PINK_GARNET_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_GARNET, 0.25f, 200, "pink_garnet");
                 offerBlasting(PINK_GARNET_SMELTABLES, RecipeCategory.MISC, ModItems.PINK_GARNET, 0.25f, 100, "pink_garnet");
 
-                offerReversibleCompactingRecipes(RecipeCategory.BUILDING_BLOCKS, ModItems.PINK_GARNET, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GARNET_BLOCK);
+                offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.PINK_GARNET, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_GARNET_BLOCK);
 
                 offerReversibleCompactingRecipes(RecipeCategory.MISC, ModItems.RUNE_ESSENCE, RecipeCategory.MISC, ModBlocks.RUNE_BLOCK);
 
@@ -95,7 +99,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 createFenceRecipe(ModBlocks.PINK_GARNET_FENCE, Ingredient.ofItem(ModItems.PINK_GARNET))
                         .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
                         .offerTo(exporter);
-                createFenceRecipe(ModBlocks.PINK_GARNET_WALL, Ingredient.ofItem(ModItems.PINK_GARNET))
+                createTrapdoorRecipe(ModBlocks.PINK_GARNET_WALL, Ingredient.ofItem(ModItems.PINK_GARNET))
                         .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
                         .offerTo(exporter);
 
@@ -140,6 +144,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('S', Items.STICK)
                         .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
                         .offerTo(exporter);
+
+                createShaped(RecipeCategory.COMBAT, ModItems.PINK_GARNET_HELMET)
+                        .pattern("RRR")
+                        .pattern("R R")
+                        .pattern("   ")
+                        .input('R', ModItems.PINK_GARNET)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.COMBAT, ModItems.PINK_GARNET_CHESTPLATE)
+                        .pattern("R R")
+                        .pattern("RRR")
+                        .pattern("RRR")
+                        .input('R', ModItems.PINK_GARNET)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.COMBAT, ModItems.PINK_GARNET_LEGGINGS)
+                        .pattern("RRR")
+                        .pattern("R R")
+                        .pattern("R R")
+                        .input('R', ModItems.PINK_GARNET)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+                createShaped(RecipeCategory.COMBAT, ModItems.PINK_GARNET_BOOTS)
+                        .pattern("   ")
+                        .pattern("R R")
+                        .pattern("R R")
+                        .input('R', ModItems.PINK_GARNET)
+                        .criterion(hasItem(ModItems.PINK_GARNET), conditionsFromItem(ModItems.PINK_GARNET))
+                        .offerTo(exporter);
+
+                offerSmithingTrimRecipe(ModItems.ILYAS_SMITHING_TEMPLATE, RegistryKey.of(RegistryKeys.RECIPE,
+                        Identifier.ofVanilla(getItemPath(ModItems.ILYAS_SMITHING_TEMPLATE) + "_smithing_trim_")));
+
+
 
 
             }
