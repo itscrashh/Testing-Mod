@@ -67,5 +67,7 @@
   "tooltip.testingmod.hammer_item.tooltip": "Hold §eShift§r for more information!",
 
   "trim_material.testingmod.pink_garnet": "Pink Garnet Material",
-  "trim_pattern.testingmod.ilyas": "Ilyas Armor Pattern"
+  "trim_pattern.testingmod.ilyas": "Ilyas Armor Pattern",
+
+  "item.testingmod.fire_staff": "Fire Staff"
 }

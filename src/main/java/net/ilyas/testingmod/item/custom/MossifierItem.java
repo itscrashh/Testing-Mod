@@ -1,10 +1,12 @@
 package net.ilyas.testingmod.item.custom;
 
 import net.ilyas.testingmod.component.ModDataComponentTypes;
+import net.ilyas.testingmod.item.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.render.item.property.bool.DamagedProperty;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -23,6 +25,7 @@ import java.util.Map;
 
 public class MossifierItem extends Item {
 
+
     private static final Map<Block, Block> MOSSIFIER_MAP =
             Map.of(
                     Blocks.COBBLESTONE, Blocks.MOSSY_COBBLESTONE,
@@ -38,16 +41,19 @@ public class MossifierItem extends Item {
     public ActionResult useOnBlock(ItemUsageContext context) {
         World world = context.getWorld();
         Block clickedBlock = world.getBlockState(context.getBlockPos()).getBlock();
+        ItemStack stack = new ItemStack(ModItems.MOSSIFIER);
 
         if(MOSSIFIER_MAP.containsKey(clickedBlock)) {
             if(!world.isClient()) {
                 world.setBlockState(context.getBlockPos(), MOSSIFIER_MAP.get(clickedBlock).getDefaultState());
-                context.getStack().damage(1, ((ServerWorld) world),  ((ServerPlayerEntity) context.getPlayer()),
+                context.getStack().damage(1, ((ServerWorld) world), ((ServerPlayerEntity) context.getPlayer()),
                         item -> context.getPlayer().sendEquipmentBreakStatus(item, EquipmentSlot.MAINHAND));
 
                 world.playSound(null, context.getBlockPos(), SoundEvents.BLOCK_GRINDSTONE_USE, SoundCategory.BLOCKS);
 
                 context.getStack().set(ModDataComponentTypes.COORDINATES, context.getBlockPos());
+
+
 
             }
         }

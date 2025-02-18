@@ -10,10 +10,14 @@ import net.ilyas.testingmod.item.ModItems;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.entity.equipment.EquipmentModel;
 import net.minecraft.client.render.item.model.ItemModel;
+import net.minecraft.client.render.item.property.numeric.CountProperty;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.equipment.EquipmentAssetKeys;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
+
+import java.util.List;
+import java.util.function.Consumer;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -56,9 +60,27 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        Identifier modelId = itemModelGenerator.upload(ModItems.MOSSIFIER, Models.HANDHELD);
+        itemModelGenerator.registerSubModel(ModItems.MOSSIFIER, "_damaged", Models.HANDHELD);
+        itemModelGenerator.output.accept(
+                ModItems.MOSSIFIER,
+                ItemModels.rangeDispatch(
+                        new CountProperty(true),
+                        ItemModels.basic(modelId),
+                        List.of(
+                                ItemModels.rangeDispatchEntry(
+                                        ItemModels.basic(modelId),
+                                        1.0f
+                                )
+                        )
+                )
+        );
+
+
+
         itemModelGenerator.register(ModItems.PINK_GARNET, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_PINK_GARNET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.MOSSIFIER, Models.GENERATED);
+
 
         itemModelGenerator.register(ModItems.AIR_RUNE, Models.GENERATED);
         itemModelGenerator.register(ModItems.FIRE_RUNE, Models.GENERATED);
@@ -84,6 +106,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(ModItems.PINK_GARNET_HORSE_ARMOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.ILYAS_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.FIRE_STAFF, Models.HANDHELD);
 
     }
 }

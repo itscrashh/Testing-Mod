@@ -1,0 +1,14 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "testingmod:item/mossifier"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "testingmod:used": 1
+      },
+      "model":"testingmod:item/mossifier_1"
+    }
+  ]
+}

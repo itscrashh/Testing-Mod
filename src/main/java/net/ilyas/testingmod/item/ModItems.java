@@ -66,6 +66,9 @@ public class ModItems {
     public static final Item ILYAS_SMITHING_TEMPLATE = registerItem("ilyas_smithing_template",
     SmithingTemplateItem.of(new Item.Settings().registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "ilyas_smithing_template"))))));
 
+    public static final Item FIRE_STAFF = registerItem("fire_staff",
+            new FireStaffItem(new Item.Settings().registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "fire_staff"))))));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(TestingMod.MOD_ID, name), item);

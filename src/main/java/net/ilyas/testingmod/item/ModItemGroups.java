@@ -3,6 +3,7 @@ package net.ilyas.testingmod.item;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.ilyas.testingmod.TestingMod;
 import net.ilyas.testingmod.block.ModBlocks;
+import net.minecraft.client.render.item.model.special.SpecialModelTypes;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
@@ -80,6 +81,8 @@ public class ModItemGroups {
                         entries.add(ModItems.AIR_TALISMAN);
                         entries.add(ModBlocks.RUNE_BLOCK);
                         entries.add(ModBlocks.ALTAR_BLOCK);
+
+                        entries.add(ModItems.FIRE_STAFF);
 
                     }).build());
 
