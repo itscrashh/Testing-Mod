@@ -2,27 +2,35 @@ package net.ilyas.testingmod.datagen;
 
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.ilyas.testingmod.TestingMod;
 import net.ilyas.testingmod.block.ModBlocks;
 import net.ilyas.testingmod.block.custom.PinkGarnetLampBlock;
 import net.ilyas.testingmod.item.ModArmorMaterials;
 import net.ilyas.testingmod.item.ModItems;
 import net.minecraft.client.data.*;
-import net.minecraft.client.render.entity.equipment.EquipmentModel;
 import net.minecraft.client.render.item.model.ItemModel;
+import net.minecraft.client.render.item.property.bool.BooleanProperty;
 import net.minecraft.client.render.item.property.numeric.CountProperty;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.equipment.EquipmentAssetKeys;
-import net.minecraft.registry.RegistryKey;
+import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
-import java.util.function.Consumer;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
         super(output);
     }
+
+   // public void registerCondition(Item item, BooleanProperty property, ItemModel.Unbaked onTrue, ItemModel.Unbaked onFalse) {
+       // ItemModelGenerator.output.accept(item, ItemModels.condition(property, onTrue, onFalse));
+    //}
+
+    // public void registerWithBrokenCondition(Item item) {
+     //   ItemModel.Unbaked unbaked = ItemModels.basic(ItemModelGenerator.upload(item, Models.HANDHELD));
+     //   ItemModel.Unbaked unbaked2 = ItemModels.basic(ItemModelGenerator.registerSubModel(item, "_broken", Models.HANDHELD));
+      //  this.registerCondition(item, BooleanProperty, unbaked2, unbaked);
+   // }
+
+
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
