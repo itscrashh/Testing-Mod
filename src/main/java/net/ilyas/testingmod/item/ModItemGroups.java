@@ -88,6 +88,15 @@ public class ModItemGroups {
 
 
 
+    public static final ItemGroup RUBY_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(TestingMod.MOD_ID, "ruby_items"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.RUBY))
+                    .displayName(Text.translatable("itemgroup.testingmod.ruby_items"))
+                    .entries((displayContext, entries) ->  {
+                        entries.add(ModItems.RUBY);
+                        entries.add(ModItems.RUBY_PICKAXE);
+
+                    }).build());
     public static void registerItemGroups() {
         TestingMod.LOGGER.info("Registering Item Groups for " + TestingMod.MOD_ID);
     }

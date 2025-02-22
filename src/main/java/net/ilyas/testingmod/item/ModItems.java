@@ -17,6 +17,8 @@ public class ModItems {
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID,"pink_garnet")))));
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID,"raw_pink_garnet")))));
 
+    public static final Item RUBY = registerItem("ruby", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID,"ruby")))));
+
     public static final Item MOSSIFIER = registerItem("mossifier", new MossifierItem(new Item.Settings().maxDamage(100).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "mossifier")))));
 
     public static final Item AIR_RUNE = registerItem("air_rune", new Item(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID,"air_rune")))));
@@ -58,6 +60,10 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, EquipmentType.BOOTS, new Item.Settings()
                     .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "pink_garnet_boots"))))));
 
+    public static final Item RUBY_PICKAXE = registerItem("ruby_pickaxe",
+            new PickaxeItem(ModToolsMaterials.RUBY, 1, -2.8f, new Item.Settings()
+                    .registryKey((RegistryKey.of(RegistryKeys.ITEM, Identifier.of(TestingMod.MOD_ID, "ruby_pickaxe"))))));
+
     public static final Item PINK_GARNET_HORSE_ARMOR = registerItem("pink_garnet_horse_armor",
             new AnimalArmorItem(ModArmorMaterials.PINK_GARNET_ARMOR_MATERIAL, AnimalArmorItem.Type.EQUESTRIAN, new Item.Settings()
                     .maxCount(1)
@@ -84,6 +90,7 @@ public class ModItems {
             entries.add(FIRE_RUNE);
             entries.add(RUNE_ESSENCE);
             entries.add(AIR_RUNE);
+            entries.add(RUBY);
         });
 
     }

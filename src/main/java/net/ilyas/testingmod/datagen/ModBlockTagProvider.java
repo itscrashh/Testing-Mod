@@ -56,6 +56,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.ANCIENT_DEBRIS);
         getOrCreateTagBuilder(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
                 .add(Blocks.DIAMOND_BLOCK);
+        getOrCreateTagBuilder(ModTags.Blocks.NEEDS_RUBY_TOOL);
 
 
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
@@ -68,22 +69,30 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_WOODEN_TOOL)
                 .addTag(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
-                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL);
+                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
+                .addTag(ModTags.Blocks.NEEDS_RUBY_TOOL);
         getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_STONE_TOOL)
                 .addTag(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
-                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL);
+                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
+                .addTag(ModTags.Blocks.NEEDS_RUBY_TOOL);
         getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_GOLD_TOOL)
                 .addTag(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
-                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL);
+                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
+                .addTag(ModTags.Blocks.NEEDS_RUBY_TOOL);
         getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_IRON_TOOL)
                 .addTag(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
-                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL);
+                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
+                .addTag(ModTags.Blocks.NEEDS_RUBY_TOOL);
         getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
                 .addTag(ModTags.Blocks.NEEDS_PINK_GARNET_TOOL)
-                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL);
+                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
+                .addTag(ModTags.Blocks.NEEDS_RUBY_TOOL);
         getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_PINK_GARNET_TOOL)
-                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL);
-        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
+                .addTag(ModTags.Blocks.NEEDS_NETHERITE_TOOL)
+                .addTag(ModTags.Blocks.NEEDS_RUBY_TOOL);
+        getOrCreateTagBuilder(BlockTags.INCORRECT_FOR_NETHERITE_TOOL)
+                .addTag(ModTags.Blocks.NEEDS_RUBY_TOOL);
+        getOrCreateTagBuilder(ModTags.Blocks.INCORRECT_FOR_RUBY_TOOL);
 
 
 
